@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-09-05T16:56:34.867763+00:00",
+  "scope": "real exported CLI CPU smoke on two in-sample historical crops; not accuracy or backend-parity validation",
+  "runtime": {
+    "python": "3.11.13",
+    "torch": "2.12.1",
+    "torchvision": "0.27.1",
+    "numpy": "2.2.6",
+    "Pillow": "12.2.0",
+    "device": "cpu",
+    "precision": "fp32"
+  },
+  "package": "/Users/user/Documents/ChatGPT/Helena/legibility-v5-training-2026-09-05/export/v5-r2b-experimental",
+  "metadata_sha256": "ba055ff7d799eded7efc45e2fff08333c25ae33fe67fdbf6faca5fdf6925fcdc",
+  "checkpoint_sha256": "7179f40882a755d885d9eca88eb0a9b54c436264cd3bcd8c913054812294865c",
+  "harness_note": "Initial manual check hashed uint8 bytes against the float32 RGB tensor hash and stopped before scoring. Corrected to the frozen tensor_sha256 contract, with independent equality to the stored uint8 tensor; training/model code unchanged.",
+  "cases": [
+    {
+      "sample_id": "s4:w013:768:4096",
+      "source_image_sha256": "53863b66c535d2d184938433e30cda9539d9735b3bbf99486a9215514998b174",
+      "input_tensor_sha256": "1877f6f936aae21d105bd2102451ff0bd106645f0663c4aa9587dce4aba6874c",
+      "output": {
+        "candidate_arm": "R2B",
+        "checkpoint_sha256": "7179f40882a755d885d9eca88eb0a9b54c436264cd3bcd8c913054812294865c",
+        "logit": -4.1394877433776855,
+        "quality_status": "EXPERIMENTAL",
+        "recipe_id": "stretch160",
+        "schema_version": 1,
+        "scope": "single supplied crop; no detection, localization, transcription or calibrated probability claim",
+        "score": 0.015681192278862,
+        "score_semantics": "uncalibrated ranking score",
+        "seed": 0
+      },
+      "cli_elapsed_seconds": 1.7116197909999755,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "sample_id": "s4:w013:0:7680",
+      "source_image_sha256": "27acac257050c82f0a4d2d9bd8a76128e151bd3254f5a3343c08250bab1da829",
+      "input_tensor_sha256": "e769fc65f8eac5c9e5a272223dd75de6400e0b3e39cd1651898ed32a1ac8da61",
+      "output": {
+        "candidate_arm": "R2B",
+        "checkpoint_sha256": "7179f40882a755d885d9eca88eb0a9b54c436264cd3bcd8c913054812294865c",
+        "logit": 0.4184136986732483,
+        "quality_status": "EXPERIMENTAL",
+        "recipe_id": "stretch160",
+        "schema_version": 1,
+        "scope": "single supplied crop; no detection, localization, transcription or calibrated probability claim",
+        "score": 0.6031036376953125,
+        "score_semantics": "uncalibrated ranking score",
+        "seed": 0
+      },
+      "cli_elapsed_seconds": 1.6506440000011935,
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ]
+}
