@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-05T16:07:22.484429+00:00",
+  "status": "FROZEN_BEFORE_REAL_FITS",
+  "scope": "historical_unharmonized_diagnostic",
+  "real_fits_started": false,
+  "transfer_status_at_freeze": "PENDING_EXPLICIT_PAYLOAD_APPROVAL_AFTER_AUTO_REVIEW_REJECTION",
+  "code_and_protocol_files": {
+    "training_config.json": "fb575c1a20fcf060fb217aa34e9d404851b62868b173ef6b73876dc3e8673ee3",
+    "CONTRACT.md": "0fc51bf94b413998e7f472c29a5a29873a40e146b4a987158a65ad07d2203085",
+    "prepare_data.py": "bf0ad798b13edce688911795f36bbfa7231323fde9f30723092ca7343d8d161d",
+    "preprocess.py": "f7707b662a7d69752b6b56b0799138a5856dbdbcf7d0f0f66d86bbe9cbe34d16",
+    "train.py": "ef28d089701ba42b7858c95d2823ae28256e1266e322d046fa4d100593ef2025",
+    "evaluate_training.py": "3780688702f8f99a423f3e9313ccba86c0de6efb07460c80eed6f84fcb563f00",
+    "score.py": "2eeeb9d25f892b1723969a454b602f1ba832dea42c358a48b7b02b91028cfa8d",
+    "data/dataset.json": "186825041dbde6cda19f2f130a20711db9a303b10c3e10d81b40eb5f664da637",
+    "data/splits.json": "4e7f31f46c19a83794adc587bd80c155e1dd16d159151f05623da478892e7f5b",
+    "ops/numerical_policy.json": "74551dc01310affd8fac93043425c5d5e8d5f9f9b1c18301d5c8a995659defd5",
+    "ops/profile_train_snapshot.py": "fb2878ef91b5aa2e633c8d79127c644eb6d641415b25b7cbe274d7f251ff860e",
+    "reports/gpu-profile/receipt.json": "73f45fab5d5a27b919395fcf9bb9a6e6caa6960f8dd8e677c0cfac3998640a89",
+    "ops/local_verification.json": "ba6e37a4816f2bda3d998c1d5c0a1d5a50582664d63960ffe6cd16f0751e28bf",
+    "weights/resnet18-f37072fd.receipt.json": "06145d4298b219c2cced15fa99bbb8604eb78d1c1de11d7fe365d14b692c7004",
+    "tests/test_data.py": "1f7ae682e7662be4adc4a886f64a88075e59376a6722dbb45d464e96405aae06",
+    "tests/test_evaluation.py": "7ae31763bd1b0dfe4f3a60f47c5d51e3925821bfe6f2654f5c72f4faf5b4cd55",
+    "tests/test_training.py": "97b54a5cc50309bb81b58442236aebd4eede56dab0f538ff7b2da0533468997f",
+    "reviews/data_split_review.md": "2d72af2160fb5471d8418f7fa9870feea23852bc7266387e3b3020212528a644",
+    "reviews/final_runner_review.md": "9d76a74746cd4035eaccc04f5e246e6c1a6661dc7049804ab854f92ce094be01",
+    "reviews/integration_review.md": "07e4e9d3b58a2e7d30f8ecc5104af4876f4f61de5bee6028eca31eedd0229c1c",
+    "reviews/trainer_review.md": "222260d25352acbae9f99fdd808267799847833de58693da472bf50c1177c8e3"
+  },
+  "dataset_files": {
+    "data/samples.jsonl": "1bd9ef6352b9e6d45e2e680d4c7fdc3da7452cddd92339ec62613bc6ecb42980",
+    "data/tensors.npy": "a817b18c4cbc67586346c57eaa58b22aa2289e233d800aeb8620607912bc5aef",
+    "data/labels.npy": "dcd035c138ceaf0a06cf3a73a346411d89a1b9c2e4894834be35fc782799ccaf",
+    "data/features.npy": "dbf1af5f5fe0d2961a97223e4b0da06662aaf2488844a2abae4bb8e3c9b9c7c8",
+    "data/dataset.json": "186825041dbde6cda19f2f130a20711db9a303b10c3e10d81b40eb5f664da637",
+    "data/splits.json": "4e7f31f46c19a83794adc587bd80c155e1dd16d159151f05623da478892e7f5b"
+  },
+  "initializer_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "transfer_tar_sha256": "8e999babf68930f409b25e9ac3960ab55600d48f5b99594ad7c9e1068b6bf67a",
+  "jobs": 45,
+  "optimizer_updates": 15228,
+  "precision": "bf16",
+  "memory_format": "channels_last",
+  "predeclared_candidate": "R2B",
+  "refit_seed": 0,
+  "refit_full_training_n": 2836,
+  "refit_max_updates": 534,
+  "refit_step_rule": "median of 15 R2B validation-selected step fractions, multiplied by full-data 534 updates; round half up and clamp 1..534",
+  "candidate_gate": {
+    "complete_coverage": true,
+    "min_macro_auroc_delta_vs_R1": 0.01,
+    "min_per_roll_mean_auroc_delta_vs_R1": -0.03
+  },
+  "quality_claims": "No measured v5 quality improvement yet. This protocol supports historical retrospective diagnostics only.",
+  "revision": 2,
+  "supersedes": {
+    "path": "freeze.json",
+    "sha256": "bf024457a3367b5288055993f8a2c03032aca8b8a62630840014dc03fa83fdbb",
+    "reason": "Final read-only review document finished writing during first seal. No code, config, input, policy or test file changed; no real fit occurred."
+  }
+}
