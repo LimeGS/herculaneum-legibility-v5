@@ -30,8 +30,10 @@ calibrated probability.
 | **R2B** | **shipped**: R2 + per-scroll/class loss balancing | **0.8105** | 0.0220 |
 
 - **V5 (R2B) − v4 = +0.0547** macro; on the same folds the archived model
-  scored 0.756. Correcting the labels is what moves the needle: the pixel
-  controls stay at 0.66–0.69, well below v4.
+  scored 0.756. The retrained arms clear v4 by a wide margin, while the
+  pixel-statistic controls stay at 0.66–0.69, below v4. (R1 − v4 compares a
+  full retraining against a historical reference with known exposure; it does
+  not isolate a single cause for the difference.)
 - The shipped checkpoint is **R2B**, the arm predeclared as the V5 candidate:
   its recipe, step budget and status were frozen before the test was consulted.
   R1 (a cross-validation arm) scored higher and is retained as a hypothesis to
@@ -51,9 +53,8 @@ The exported checkpoint is the all-data R2B refit (seed 0, 356 steps, median of
 the 15 validation-selected step fractions). It has **no held-out evaluation**
 of its own. Its checkpoint is `7179f40882a7…` (SHA-256
 `7179f40882a755d885d9eca88eb0a9b54c436264cd3bcd8c913054812294865c`), and its
-machine-readable status is `EXPERIMENTAL` — the honest label for an artifact
-whose comparison is a retrospective historical diagnostic, not a confirmatory
-trial.
+machine-readable status is `EXPERIMENTAL`, the label for an artifact whose
+comparison is a retrospective historical diagnostic, not a confirmatory trial.
 
 ## Artifacts (published)
 
@@ -82,8 +83,7 @@ and `refit_config.json`, and the full evidence (`REPORT.md`,
 - The portable scorer runs CPU FP32; the historical metrics used CUDA BF16, so
   small numerical differences are possible.
 - The 430 additions are provisional training-only labels, not a newly certified
-  sample. The 430-addition and balancing arms (R2, R2B) scored below R1 in this
-  comparison, which is why the exported artifact is labelled experimental.
+  sample.
 
 ## License
 
