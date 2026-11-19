@@ -1,5 +1,8 @@
 # Legibility index v5 — a corrected-label retraining that improves on the archived model
 
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey)](LICENSE)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-model-yellow)](https://huggingface.co/LimeGS/herculaneum-legibility-proxy-v5)
+
 We retrained the small legibility classifier behind the
 [legibility index](https://github.com/LimeGS/herculaneum-legibility-index) on a
 corrected historical cohort. **V5 improves sharply on the archived `proxy_v4`:
@@ -84,6 +87,21 @@ and `refit_config.json`, and the full evidence (`REPORT.md`,
   small numerical differences are possible.
 - The 430 additions are provisional training-only labels, not a newly certified
   sample.
+
+## Related projects
+
+Part of the LimeGS toolchain for the [Vesuvius Challenge](https://scrollprize.org):
+
+- [winding-field](https://github.com/LimeGS/winding-field): winding-field core and reproducible evaluation.
+- [winding-field-cli](https://github.com/LimeGS/winding-field-cli): end-to-end CLI from CT to fibres, winding field, meshes and flattened charts.
+- [ink-sdk](https://github.com/LimeGS/ink-sdk): standalone ink inference on surface volumes, or on tifxyz meshes plus CT.
+- [helena-framework](https://github.com/LimeGS/helena-framework): reproducible, auditable orchestration of the volume → surface → ink → page pipeline.
+- [herculaneum-legibility-index](https://github.com/LimeGS/herculaneum-legibility-index): legibility triage over the official ink maps.
+- [vesuvius-chat](https://github.com/LimeGS/vesuvius-chat): search the Discord research archive from a web chat or an AI agent.
+
+## Citation
+
+If you use this work, please cite it with the metadata in [CITATION.cff](CITATION.cff) (GitHub's **Cite this repository** button reads it).
 
 ## License
 
